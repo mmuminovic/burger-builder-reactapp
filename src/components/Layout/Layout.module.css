@@ -1,4 +1,5 @@
 .Content {
-    width: 100%;
-    align-items: center;
+    background-color:rgb(150, 191, 224);
+    padding-top: 72px;
+    height: 100%;
 }
