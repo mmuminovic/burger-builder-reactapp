@@ -12,8 +12,8 @@ const controls = [
 const burgerControls = (props) => {
 
     return (
-        <div className={classes.Controls}>
-            <p>Total Price: {props.totalPrice}</p>
+        <div className={classes.BuildControls}>
+            <p>Total Price: {props.totalPrice.toFixed(2)}$</p>
             {controls.map(ctrl => (
                 <BurgerControl
                     key={ctrl.label}
@@ -21,8 +21,16 @@ const burgerControls = (props) => {
                     added={() => props.ingredientAdded(ctrl.type)}
                     removed={() => props.ingredientRemoved(ctrl.type)}
                     totalPrice={() => props.totalPrice}
+                    disabled={props.disabled[ctrl.type]}
                 />
             ))}
+            <button
+                className={classes.OrderButton}
+                disabled={!props.purchasable}
+                onClick={props.ordered}
+            >
+                Order now!
+            </button>
         </div>
     );
 }
