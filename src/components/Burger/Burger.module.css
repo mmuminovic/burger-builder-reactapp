@@ -8,4 +8,10 @@
     overflow: auto;
 }
 
+@media(max-width: 499px) {
+    .Burger {
+        padding-bottom: 0;
+    }
+}
+
 

@@ -49,3 +49,9 @@
         transform: scale(1);
     }
 }
+
+@media(max-width: 499px) {
+    .BuildControls {
+        padding: 0;
+    }
+}
