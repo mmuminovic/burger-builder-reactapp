@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../../hoc/Aux';
+// import Aux from '../../../hoc/Aux';
 
 import Button from '../../UI/Button/Button';
 
@@ -15,7 +15,7 @@ class OrderSummary extends Component {
                 return <li key={igKey}><span style={{ textTransform: 'capitalize' }}>{igKey}</span>: {this.props.ingredients[igKey]}</li>
             });
         return (
-            <Aux>
+            <div style={{display: this.props.loading ? 'none': null}}>
                 <h3>Your order</h3>
                 <p>A delicious burger with the following ingredients:</p>
                 <ul>
@@ -25,7 +25,7 @@ class OrderSummary extends Component {
                 <p>Continue to checkout?</p>
                 <Button btnType="Danger" clicked={this.props.purchaseCancelled}>Cancel</Button>
                 <Button btnType="Success" clicked={this.props.purchaseContinued}>Continue</Button>
-            </Aux>
+            </div>
         );
     }
 }
