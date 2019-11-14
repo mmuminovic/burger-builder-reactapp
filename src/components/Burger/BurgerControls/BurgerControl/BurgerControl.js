@@ -1,6 +1,6 @@
 import React from 'react';
 // import Aux from '../../../../hoc/Aux';
-import classes from './BurgerControl.module.css';
+import classes from './BurgerControl.module.module.css';
 
 const burgerControl = ( props ) => {
     return(

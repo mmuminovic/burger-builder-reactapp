@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-import CheckoutSummary from '../../components/Order/CheckoutSummary/Checkout';
+import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
 import ContactData from './ContactData/ContactData';
 
 class Checkout extends Component {
     state = {
-        ingredients: {
-            salad: 0,
-            bacon: 0,
-            cheese: 0,
-            meat: 0
-        },
+        ingredients: null,
         price: 0
     }
 

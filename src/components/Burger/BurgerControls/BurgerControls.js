@@ -1,6 +1,6 @@
 import React from 'react';
 import BurgerControl from './BurgerControl/BurgerControl';
-import classes from './BurgerControls.module.css'
+import classes from './BurgerControls.module.module.css'
 
 const controls = [
     { label: 'Salad', type: 'salad' },
